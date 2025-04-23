@@ -1,0 +1,34 @@
+name: frindz_app
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  swipe_cards: ^2.0.0
+  font_awesome_flutter: ^10.7.0
+  cupertino_icons: ^1.0.8
+  flutter_map: ^6.0.0
+  latlong2: ^0.9.0
+  geolocator: ^11.0.0
+  permission_handler: ^11.3.0
+  http: ^1.3.0               # ← pour les appels REST
+  flutter_typeahead: ^4.0.0 
+  url_launcher: ^6.1.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/icons/
