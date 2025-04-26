@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:geolocator/geolocator.dart';
+import '../env.dart';
 
 class MapPage extends StatefulWidget {
   const MapPage({super.key});
@@ -11,8 +12,7 @@ class MapPage extends StatefulWidget {
 }
 
 class _MapPageState extends State<MapPage> {
-  final mapboxAccessToken =
-      'sk.eyJ1IjoiZnJpbmR6YXBwIiwiYSI6ImNtOWU1bnRwYjE0bGMyanNjZjRyeWxnN2oifQ.HVP318fHTZd7s4cjgArq5w';
+  final String mapboxKey = mapboxApiKey;
 
   final List<Map<String, dynamic>> events = [
     {
@@ -168,7 +168,7 @@ class _MapPageState extends State<MapPage> {
             children: [
               TileLayer(
                 urlTemplate:
-                    'https://api.mapbox.com/styles/v1/mapbox/streets-v12/tiles/{z}/{x}/{y}@2x?access_token=$mapboxAccessToken',
+                    'https://api.mapbox.com/styles/v1/mapbox/streets-v12/tiles/{z}/{x}/{y}@2x?access_token=$mapboxKey',
                 userAgentPackageName: 'com.example.frindz_app',
               ),
               MarkerLayer(
